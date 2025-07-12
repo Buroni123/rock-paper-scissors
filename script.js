@@ -10,10 +10,11 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-   prompt("Rock, Papers, Scissors?")
+  const humanChoice = prompt("Rock, Papers, Scissors?")
+  return humanChoice
 }
 
-getHumanChoice()
+console.log(getHumanChoice())
 console.log(getComputerChoice())
 
 // get 3 values
