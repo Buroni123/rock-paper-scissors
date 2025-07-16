@@ -17,11 +17,6 @@ function getComputerChoice() {
     }
 }
 
-// function getHumanChoice() {
-//   const humanChoice = prompt("rock, paper, scissors?")
-//   return humanChoice.toLowerCase()
-// }
-
 let score = document.createElement('p')
 score.classList.add('scores')
 score.textContent = `Your Score: ${humanScore}, Computer Score: ${computerScore}`
@@ -104,20 +99,3 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 }
-
-
-
-// function playGame() {
-//     humanScore = 0
-//     computerScore = 0
-//     for(let i=0; i<5; i++) {
-//         const humanSelection = getHumanChoice()
-//         const computerSelection = getComputerChoice()
-//         playRound(humanSelection, computerSelection)
-//     }
-//     console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`)
-// }
-
-
-
-// playGame()
