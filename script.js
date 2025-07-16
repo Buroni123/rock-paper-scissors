@@ -1,5 +1,8 @@
 let humanScore = 0
 let computerScore = 0
+const rock = document.querySelector('.rock')
+const paper = document.querySelector('.paper')
+const scissors = document.querySelector('.scissors')
 
 function getComputerChoice() {
     const computerChoice = Math.floor(Math.random() * 3)
@@ -12,12 +15,14 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-  const humanChoice = prompt("rock, paper, scissors?")
-  return humanChoice.toLowerCase()
-}
+// function getHumanChoice() {
+//   const humanChoice = prompt("rock, paper, scissors?")
+//   return humanChoice.toLowerCase()
+// }
 
-
+rock.addEventListener("click", () => playRound("rock", getComputerChoice()))
+paper.addEventListener("click", () => playRound("paper", getComputerChoice()))
+scissors.addEventListener("click", () => playRound("scissors", getComputerChoice()))
 
 
 function playRound(humanChoice, computerChoice) {
@@ -49,17 +54,17 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-function playGame() {
-    humanScore = 0
-    computerScore = 0
-    for(let i=0; i<5; i++) {
-        const humanSelection = getHumanChoice()
-        const computerSelection = getComputerChoice()
-        playRound(humanSelection, computerSelection)
-    }
-    console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`)
-}
+// function playGame() {
+//     humanScore = 0
+//     computerScore = 0
+//     for(let i=0; i<5; i++) {
+//         const humanSelection = getHumanChoice()
+//         const computerSelection = getComputerChoice()
+//         playRound(humanSelection, computerSelection)
+//     }
+//     console.log(`Human score: ${humanScore}, Computer score: ${computerScore}`)
+// }
 
 
 
-playGame()
+// playGame()
