@@ -3,6 +3,8 @@ let computerScore = 0
 const rock = document.querySelector('.rock')
 const paper = document.querySelector('.paper')
 const scissors = document.querySelector('.scissors')
+const div = document.querySelector('.results')
+
 
 function getComputerChoice() {
     const computerChoice = Math.floor(Math.random() * 3)
@@ -27,28 +29,55 @@ scissors.addEventListener("click", () => playRound("scissors", getComputerChoice
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "rock") {
-        console.log("Draw! Both chose rock")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "Draw! Both chose rock"
+        div.appendChild(p)
     } else if (humanChoice === "paper" && computerChoice === "paper") {
-        console.log("Draw! Both chose paper")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "Draw! Both chose paper"
+        div.appendChild(p)
     } else if (humanChoice === "scissors" && computerChoice === "scissors") {
-        console.log("Draw! Both chose scissors")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "Draw! Both chose scissors"
+        div.appendChild(p)
     } else if (humanChoice === "rock" && computerChoice === "paper") {
-        console.log("You lose! Paper beats rock")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "You lose! Paper beats rock"
+        div.appendChild(p)
         computerScore++
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
-        console.log("You lose! Scissors beats paper")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "You lose! Scissors beats paper"
+        div.appendChild(p)
         computerScore++
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        console.log("You lose! Rock beats scissors")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "You lose! Rock beats scissors"
+        div.appendChild(p)
         computerScore++
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
-        console.log("You win! Rock beats scissors")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "You win! Rock beats scissors"
+        div.appendChild(p)
         humanScore++
     } else if (humanChoice === "paper" && computerChoice === "rock") {
-        console.log("You win! Paper beats rock")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "You win! Paper beats rock"
+        div.appendChild(p)
         humanScore++
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        console.log("You win! Scissors beats paper")
+        let p = document.createElement('p')
+        p.classList.add('result')
+        p.textContent = "You win! Scissors beats paper"
+        div.appendChild(p)
         humanScore++
     }
 }
